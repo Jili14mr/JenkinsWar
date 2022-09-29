@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo "Size ${params.size}"
+                echo "maven build"
+                sh 'mvn clean install'
             }
         }
         stage('deploy') {
