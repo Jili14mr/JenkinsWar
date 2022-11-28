@@ -14,6 +14,8 @@ pipeline {
         stage('build') {
             steps {
                 echo "maven build"
+                echo  "$Environment"
+		 echo "$ArtifcatFile"
                 sh 'maven clean install'
             }
         }
