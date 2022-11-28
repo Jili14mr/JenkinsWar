@@ -5,11 +5,10 @@ pipeline {
       steps {
      script{
       
-          def configVal = readYaml file: manifest.yml
+          
 	   def devdata = readYaml file: 'manifest.yml'
-            def env =devdata.Environment
-	    
-	    echo env
+             echo "= = = = "
+	     echo "${devdata.Environment}"
        }
       }
     }
