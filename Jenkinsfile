@@ -1,4 +1,4 @@
-node { def devdata = readYaml file: 'manifest.yml'
+node {  devdata = readYaml file: 'manifest.yml'
      }
 pipeline {
   agent any
