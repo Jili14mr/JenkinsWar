@@ -8,16 +8,12 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-        stage('deploy') {
-            steps {
-                echo "Color ${params.color}"
-            }
-        }
-        stage('build-test') {
-            steps {
-                sh "docker --version"
-                echo "test:color"
-            }
-        }
+
+	    stage("Read Manifest Config") {
+	        steps {
+		        def configVal = readYaml file: "manifest.yml"
+		        echo "configVal: " + configVal
+	}
+}
     }
 }
