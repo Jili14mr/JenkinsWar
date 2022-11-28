@@ -9,6 +9,7 @@ pipeline {
 		    def configVal = readYaml file: "manifest.yml"
 		    echo "configVal: " + configVal
 	    }
+	}
 +
 		    
         stage('build') {
