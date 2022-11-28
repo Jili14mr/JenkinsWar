@@ -1,8 +1,6 @@
 pipeline {
   agent any
-     parameters {
-        file(name: 'manifest.yml', description: 'Upload file test')
-    }
+     
   stages {
     stage('Example') {
       steps {
