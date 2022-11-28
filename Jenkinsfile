@@ -1,12 +1,12 @@
 pipeline {
   agent any
   parameters {
-    base64File 'yamlFile'
+    base64File 'manifest.yml'
   }
   stages {
     stage('Example') {
       steps {
-        withFileParameter('yamlFile') {
+        withFileParameter('manifest.yml') {
           def configVal = readYaml file: manifest.yml
         }
       }
