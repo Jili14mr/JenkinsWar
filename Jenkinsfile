@@ -2,18 +2,21 @@ pipeline {
     agent any
 
     stages {
+	    
+	    
+	stage("Read Manifest Config") {
+	    steps {
+		    def configVal = readYaml file: "manifest.yml"
+		    echo "configVal: " + configVal
+	    }
++
+		    
         stage('build') {
             steps {
                 echo "maven build"
-                sh 'mvn clean install'
+                sh 'maven clean install'
             }
         }
 
-	    stage("Read Manifest Config") {
-	        steps {
-		        def configVal = readYaml file: "manifest.yml"
-		        echo "configVal: " + configVal
-	}
-}
     }
 }
