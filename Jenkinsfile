@@ -15,7 +15,7 @@ pipeline {
       }
     }
       
-    stage('Example') {
+    stage('deploy') {
       steps {
 	      scipts{
         echo  "${Environment}"
