@@ -10,7 +10,7 @@ pipeline {
 		    echo "configVal: " + configVal
 	    }
 	}
-+
+
 		    
         stage('build') {
             steps {
