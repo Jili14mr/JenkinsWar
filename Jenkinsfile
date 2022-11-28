@@ -9,7 +9,7 @@ pipeline {
      script{
 	    def  devdata = readYaml file: 'manifest.yml'
              echo "= = = = "
-	     echo "${Environmen}"
+	     echo "${Environment}"
 	     echo "Environment is ${devdata.Environment}"
        }
       }
