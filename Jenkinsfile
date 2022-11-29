@@ -5,7 +5,7 @@ stage("Read Manifest Config") {
 		//echo "configVal: " + configVal
 		
 		env.ArtifcatFile = configVal['environment']
-		env.MAVEN = configVal['BUILD']['MAVEN'][0]
+		env.test = configVal['BUILD']['test'][0]
                 //env.SET = configVal['environment']
 		
 		//env.ArtifcatFile = configVal['environment']['name'][0]
@@ -18,7 +18,7 @@ stage("Deploy") {
 	node {
 
 			 echo "${ArtifcatFile}"
-		         echo "${MAVEN}"
+		         echo "${test}"
 			
 		
 	}
