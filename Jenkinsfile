@@ -5,8 +5,11 @@ pipeline {
     stage('Example') {
       steps {
      script{
-	    def  devdata = readYaml file: 'template.yaml'
+	     def yamlFile = readTrusted("config.yaml")
+	     env.environment = conf.environment
+	   // def  devdata = readYaml file: 'manifest.yml'
              echo "= = = = "
+	     
 	     echo "Hello ${aParam}"
 	     //echo ${devdata.ArtifcatFile}
 	     //echo "${Environment}"
