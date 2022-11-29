@@ -4,7 +4,7 @@ stage("Read Manifest Config") {
 		def configVal = readYaml file: "manifest.yml"
 		//echo "configVal: " + configVal
 		
-		//env.ArtifcatFile = configVal['environment']
+		ArtifcatFile = configVal['environment']
 		
 		//env.test = configVal['BUILD']['test'][0]
                 //env.SET = configVal['environment']
@@ -18,9 +18,9 @@ stage("Read Manifest Config") {
 stage("Deploy") {
 	node {
                           echo "====="
-			  echo "${configVal['environment']}"
+			  echo "${ArtifcatFile}"
 		          echo "====="
-		         //echo "${test}"
+		         
 			
 		
 	}
