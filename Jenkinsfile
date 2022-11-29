@@ -6,7 +6,7 @@ stage("Read Manifest Config") {
 		
 		ArtifcatFile = configVal['env']
 		          echo "====="
-			  echo "${configVal.env.ArtifcatFile}"
+			  echo "${env.ArtifcatFile}"
 		          echo "====="
 		
 		//env.test = configVal['BUILD']['test'][0]
