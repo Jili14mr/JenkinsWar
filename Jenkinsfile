@@ -1,14 +1,14 @@
 
-stage("Read Manifest Config") {
-	node {
-		def configVal = readYaml file: "manifest.yml"
+//stage("Read Manifest Config") {
+	//node {
+		//def configVal = readYaml file: "manifest.yml"
 		//echo "configVal: " + configVal
-		env.ArtifcatFile  = configVal['env']
+		//env.ArtifcatFile  = configVal['env']
 		
 		//ArtifcatFile = configVal['env']
-		          echo "====="
-		echo "${ArtifcatFile}"
-		          echo "====="
+		    //      echo "====="
+		//echo "${ArtifcatFile}"
+		       //   echo "====="
 		
 		//env.test = configVal['BUILD']['test'][0]
                 //env.SET = configVal['environment']
@@ -18,6 +18,15 @@ stage("Read Manifest Config") {
 		//env.BUILD_PACK = configVal['applications']['buildpacks'][0][0]
 	}
 }
+
+stage('Read YAML file') {
+        steps {
+            script{ datas = readYaml (file: 'manifest.yml') }
+            echo datas.ear_file.deploy.toString()
+
+        }
+    }
+
 
 
 		         
