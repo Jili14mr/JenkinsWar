@@ -1,11 +1,20 @@
-stages {
-    stage('Read YAML file') {
-      steps {
-        script {
-          def datas = readYaml file: 'release.yml'
-          echo "Got version as ${datas.first} "
+pipeline {
+   agent any 
+   stages {
+      stage('Build') { 
+          steps {
+             STEPS FOR BUILDING YOUR APPLICATION
+            }
         }
-      }
+      stage('Test') { 
+          steps {
+             STEPS FOR TESTING DIFFERENT SCENARIOS YOUR APPLICATION
+            }
+        }
+      stage('Deploy') { 
+          steps {
+        FINALLY DEPLOYMENT OF DIFFERENT COMPONENTS OF AN APPLICATION 
+            }
+        }
     }
 }
-
