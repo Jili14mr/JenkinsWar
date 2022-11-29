@@ -6,6 +6,8 @@ pipeline {
         script {
           def datas = readYaml file: 'release.yml'
           echo "Got version as ${datas.first} "
+          echo "Got version as ${datas.second} "
+          
         }
       }
     }
