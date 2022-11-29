@@ -16,7 +16,7 @@ stage("Read Manifest Config") {
 
 stage("Deploy") {
 	node {
-
+                    echo "====="
 			 echo "${ArtifcatFile}"
 		         //echo "${test}"
 			
