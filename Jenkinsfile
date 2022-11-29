@@ -6,7 +6,7 @@ pipeline {
             script {
                    def datas = readYaml file: 'release.yml'
                     echo "====="
-                   echo "Got version as ${datas.version} "
+                   echo "Got version as ${datas.first} "
                    echo "====="
         }
         
