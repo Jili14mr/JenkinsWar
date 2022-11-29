@@ -13,12 +13,12 @@ stage("Read Manifest Config") {
 
 stage("Deploy") {
 	node {
-		sh '''
-			...
+		//sh '''
+			//...
 			
 			 echo ${ArtifcatFile} 
 			
-			...		
-		'''
+			//...		
+		//'''
 	}
 }
