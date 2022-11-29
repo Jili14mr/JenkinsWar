@@ -1,7 +1,7 @@
 
 stage("Read Manifest Config") {
 	node {
-		def configVal = readYaml file: "manifest.yml"
+		def configVal = readYaml file: "xyz.yml"
 		//echo "configVal: " + configVal
 		
 		//xyz = configVal['env']
