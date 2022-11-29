@@ -1,4 +1,4 @@
-environment:
+env:
   ArtifcatFile: MYAPP
   SET: uat
 BUILD:
