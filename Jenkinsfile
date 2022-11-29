@@ -1,6 +1,4 @@
-pipeline {
-  agent any
-  stages {
+stages {
     stage('Read YAML file') {
       steps {
         script {
@@ -9,5 +7,5 @@ pipeline {
         }
       }
     }
-  }
 }
+
