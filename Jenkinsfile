@@ -5,6 +5,9 @@ stage("Read Manifest Config") {
 		//echo "configVal: " + configVal
 		
 		//xyz = configVal['env']
+		          echo "====="
+			  echo "${configVal.env}"
+		          echo "====="
 		
 		//env.test = configVal['BUILD']['test'][0]
                 //env.SET = configVal['environment']
@@ -15,13 +18,8 @@ stage("Read Manifest Config") {
 	}
 }
 
-stage("Deploy") {
-	node {
-                          echo "====="
-			  echo "${configVal.env}"
-		          echo "====="
+
 		         
 			
-		
-	}
+}
 }
