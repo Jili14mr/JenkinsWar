@@ -5,7 +5,9 @@ pipeline {
             steps {
             script {
                    def datas = readYaml file: 'release.yml'
+                    echo "====="
                    echo "Got version as ${datas.version} "
+                   echo "====="
         }
         
     }
