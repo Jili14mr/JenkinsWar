@@ -2,5 +2,5 @@ environment:
   ArtifcatFile: MYAPP
   SET: uat
 BUILD:
-  MAVEN: MYAPP2
+  test: MYAPP2
   ANT: MYAPP3
