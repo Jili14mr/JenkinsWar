@@ -5,6 +5,8 @@ stage("Read Manifest Config") {
 		//echo "configVal: " + configVal
 		
 		env.ArtifcatFile = configVal['environment']
+                echo ${ArtifcatFile} 
+		
 		//env.ArtifcatFile = configVal['environment']['name'][0]
 		//env.STACK = configVal['applications']['stack'][0]
 		//env.BUILD_PACK = configVal['applications']['buildpacks'][0][0]
