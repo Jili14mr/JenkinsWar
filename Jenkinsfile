@@ -16,7 +16,7 @@ stage("Read Manifest Config") {
 stage("Deploy") {
 	node {
 
-			 echo ${ArtifcatFile} 
+			 echo "${ArtifcatFile}" 
 			
 		
 	}
