@@ -1,11 +1,13 @@
 pipeline {
-   agent any 
-   stages {
-      stage('Build') { 
-          steps {
-             STEPS FOR BUILDING YOUR APPLICATION
-            }
+  agent any
+  stages {
+    stage('Read YAML file') {
+      steps {
+        script {
+          def datas = readYaml file: 'release.yml'
+          echo "Got version as ${datas.first} "
         }
-      
+      }
     }
+  }
 }
