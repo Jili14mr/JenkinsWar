@@ -1,6 +1,2 @@
-env:
-  ArtifcatFile: MYAPP
-  SET: uat
-BUILD:
-  test: MYAPP2
-  ANT: MYAPP3
+ first: myapp
+ second: uat
