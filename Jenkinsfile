@@ -7,11 +7,17 @@ pipeline {
           def datas = readYaml file: 'release.yml'
           def name = "${datas.first}"
           echo "Got version as ${name}"
-          //echo "Got version as ${datas.second} "
+          
           
         }
       }
     }
-    
+  stage('Printing name') {
+            steps {
+                script {
+                    "Got version as ${name}"
 }
+            }
+  }
+  }
 }
