@@ -18,7 +18,7 @@ node {
                //sh " cd /var/lib/jenkins/workspace/${UAIName}-${AppName}-${Cluster}-${ArtifactName}-Buildjob"
                // cd target
                // ls -alt
-                 '''
+                
  
 }
 }
