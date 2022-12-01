@@ -11,4 +11,4 @@ node {
  stage ('deplyment') {
   echo "Got version as ${datas.second} " 
 }
-
+}
