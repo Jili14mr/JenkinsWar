@@ -14,8 +14,8 @@ pipeline {
      stage('Printing name') {
             steps {
                 script {
-                    def name = "${datas.first}"
-                    def gender = "${datas.second}"
+                    def name = ${datas.first}
+                    def gender = ${datas.second}
                   echo "${gender}"
                   
       }
