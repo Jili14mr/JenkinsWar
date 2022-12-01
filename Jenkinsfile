@@ -8,9 +8,10 @@ node {
       echo "Got version as ${datas.first} "
     }
   }
+  
  stage ('deplyment') {
-   steps {
-      sh echo "Got version as ${datas.first} "
+ 
+      sh "echo Got version as ${datas.first} "
                //sh " cd /var/lib/jenkins/workspace/${UAIName}-${AppName}-${Cluster}-${ArtifactName}-Buildjob"
                // cd target
                // ls -alt
