@@ -12,14 +12,6 @@ pipeline {
         }
       }
     }
-  stage('Printing name') {
-            steps {
-                script {
-                   def datas = readYaml file: 'release.yml'
-                   def name = "${datas.first}"
-                    "Got version as ${name}"
-}
-            }
-  }
+  
   }
 }
