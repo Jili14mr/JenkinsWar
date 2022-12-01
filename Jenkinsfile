@@ -8,5 +8,7 @@ node {
       echo "Got version as ${datas.first} "
     }
   }
+ stage ('deplyment') {
+  echo "Got version as ${datas.second} " 
 }
 
